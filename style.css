@@ -61,7 +61,6 @@ p {
 #hiThere {
   display: grid;
   width: 100%;
-  height: 100vh;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.8fr 0.2fr;
   grid-template-areas:
@@ -97,7 +96,6 @@ p {
 #aboutMe {
   display: grid;
   width: 100%;
-  height: 100vh;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.1fr 0.9fr;
   grid-template-areas:
@@ -132,7 +130,6 @@ p {
 #publications {
   display: grid;
   width: 100%;
-  height: 100vh;
   grid-template-columns: 1fr;
   grid-template-rows: 0.1fr 0.9fr;
   grid-template-areas:
@@ -173,7 +170,6 @@ p {
 #hobbies {
   display: grid;
   width: 100%;
-  height: 100vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.1fr 0.9fr;
   grid-template-areas:
@@ -211,7 +207,10 @@ p {
   text-align: center;
   font-size: 1.5em;
   width: 100%;
-  margin-top: 0.7em;
+  height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hobbyItem {
