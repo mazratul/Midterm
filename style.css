@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  /* overflow-x: hidden; */
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+#navbar {
+  width: 100%;
+  background-color: black;
+  height: 2.5em;
+  display: grid;
+  position: fixed;
+  top: 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "hiThereNav aboutMeNav publicationsNav hobbiesNav galleryNav blogsNav";
+  justify-items: center;
+  place-items: center;
+}
+
+.navItem {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+#hiThereNav {
+  grid-area: hiThereNav;
+}
+#aboutMeNav {
+  grid-area: aboutMeNav;
+}
+#publicationsNav {
+  grid-area: publicationsNav;
+}
+#hobbiesNav {
+  grid-area: hobbiesNav;
+}
+#galleryNav {
+  grid-area: galleryNav;
+}
+#blogsNav {
+  grid-area: blogsNav;
+}
+
+#hiThere {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.8fr 0.2fr;
+  grid-template-areas:
+    "hello tongueOutImage albertEinstein"
+    "quote quote quote";
+  place-items: center;
+  justify-items: center;
+}
+#hello {
+  grid-area: hello;
+  text-align: center;
+  font-size: 4em;
+}
+#tongueOutImage {
+  grid-area: tongueOutImage;
+  object-fit: cover;
+  width: 100%;
+  height: 80%;
+  margin-top: 3em;
+  border-radius: 1em;
+}
+#albertEinstein {
+  grid-area: albertEinstein;
+  text-align: center;
+  font-size: 3em;
+}
+#quote {
+  grid-area: quote;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#aboutMe {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 0.9fr;
+  grid-template-areas:
+    "aboutMeHeader aboutMeHeader"
+    "myImage myDescription";
+  justify-items: center;
+}
+#aboutMeHeader {
+  grid-area: aboutMeHeader;
+  width: 100%;
+  text-align: center;
+  font-size: 2.5em;
+}
+#myImage {
+  grid-area: myImage;
+  object-fit: cover;
+  width: 70%;
+  height: 80%;
+  border-radius: 1em;
+  margin-left: 2.5em;
+}
+#myDescription {
+  grid-area: myDescription;
+  width: 70%;
+  height: 80%;
+  font-size: 1.2em;
+  text-overflow: ellipsis;
+  overflow-y: hidden;
+  margin-right: 2.5em;
+}
+
+#publications {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.9fr;
+  grid-template-areas:
+    "publicationsHeader"
+    "publicationsList";
+  justify-items: center;
+}
+#publicationsHeader {
+  grid-area: publicationsHeader;
+  width: 100%;
+  text-align: center;
+  font-size: 2.5em;
+}
+#publicationsList{
+  grid-area: publicationsList;
+  width: 100%;
+  height: 100%;
+}
+
+.publicationItem{
+  display: grid;
+  grid-template-columns: 0.1fr 0.9fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "year paper";
+  grid-gap: 1em;
+  margin: 1em 4em;
+}
+
+.year {
+  grid-area: year;
+  text-align: center;
+}
+.paper {
+  grid-area: paper;
+  text-align: left;
+}
+
+#hobbies {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 0.9fr;
+  grid-template-areas:
+    "hobbiesHeader hobbiesHeader hobbiesHeader hobbiesHeader"
+    "puzzle book violin essay";
+  justify-items: center;
+}
+#hobbiesHeader {
+  grid-area: hobbiesHeader;
+  width: 100%;
+  text-align: center;
+  font-size: 2.5em;
+}
+#puzzle {
+  grid-area: puzzle;
+}
+#book {
+  grid-area: book;
+}
+#violin {
+  grid-area: violin;
+}
+#essay {
+  grid-area: essay;
+}
+
+.hobbyItem img {
+  object-fit: cover;
+  height: 25em;
+  width: 100%;
+  border-radius: 1em;
+}
+
+.hobbyItem h4 {
+  text-align: center;
+  font-size: 1.5em;
+  width: 100%;
+  margin-top: 0.7em;
+}
+
+.hobbyItem {
+  width: 90%;
+  height: 30em;
+  padding: 0.5em;
+  border-radius: 1em;
+  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+}
