@@ -6,7 +6,6 @@ body {
   font-family: "Montserrat", sans-serif;
   padding: 0;
   margin: 0;
-  /* overflow-x: hidden; */
 }
 
 h1,
@@ -25,9 +24,9 @@ p {
   display: grid;
   position: fixed;
   top: 0;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: "hiThereNav aboutMeNav publicationsNav hobbiesNav galleryNav blogsNav";
+  grid-template-areas: "hiThereNav aboutMeNav publicationsNav awardsNav hobbiesNav galleryNav blogsNav";
   justify-items: center;
   place-items: center;
 }
@@ -47,6 +46,9 @@ p {
 }
 #publicationsNav {
   grid-area: publicationsNav;
+}
+#awardsNav {
+  grid-area: awardsNav;
 }
 #hobbiesNav {
   grid-area: hobbiesNav;
@@ -121,7 +123,7 @@ p {
   grid-area: myDescription;
   width: 70%;
   height: 80%;
-  font-size: 1.2em;
+  font-size: 1.1em;
   text-overflow: ellipsis;
   overflow-y: hidden;
   margin-right: 2.5em;
@@ -136,7 +138,6 @@ p {
     "publicationsHeader"
     "publicationsList";
   justify-items: center;
-  align-items: center;
 }
 #publicationsHeader {
   grid-area: publicationsHeader;
@@ -161,7 +162,6 @@ p {
   justify-items: center;
   width: 100%;
   column-gap: 1em;
-  margin: 2em 0;
   padding: 1em;
   border-radius: 1em;
   box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
@@ -177,7 +177,7 @@ p {
   grid-area: paper;
   text-align: left;
   width: 100%;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .paperImage {
@@ -186,6 +186,79 @@ p {
   height: 12em;
   object-fit: cover;
   border-radius: 1em;
+}
+
+#awards {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 0.45fr 0.45fr;
+  grid-template-areas:
+    "awardsHeader awardsHeader awardsHeader awardsHeader"
+    "award1 award2 award3 award7"
+    "award5 award6 award4 award8";
+    column-gap: 1em;
+  justify-items: center;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+#awardsHeader {
+  grid-area: awardsHeader;
+  width: 100%;
+  text-align: center;
+  font-size: 2.5em;
+}
+#award1 {
+  grid-area: award1;
+}
+#award2 {
+  grid-area: award2;
+}
+#award3 {
+  grid-area: award3;
+}
+#award4 {
+  grid-area: award4;
+}
+#award5 {
+  grid-area: award5;
+}
+#award6 {
+  grid-area: award6;
+}
+#award7 {
+  grid-area: award7;
+}
+#award8 {
+  grid-area: award8;
+}
+
+.awardItem {
+  height: 27em;
+  width: 100%;
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 1em;
+  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+}
+.awardItem img {
+  height: 20em;
+  width: 100%;
+  border-radius: 1em;
+  object-fit: cover;
+  
+}
+.awardItem h4 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+}
+.awardItem span {
+  width: 100%;
+  text-align: center;
+  font-size: 0.9em;
 }
 
 #hobbies {
@@ -237,7 +310,68 @@ p {
 .hobbyItem {
   width: 90%;
   height: 30em;
-  padding: 0.5em;
+  padding: 1em;
   border-radius: 1em;
   box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+}
+
+#gallery {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 0.2fr 0.6fr 0.2fr;
+  grid-template-rows: 0.1fr 0.5fr 0.4fr;
+  grid-template-areas:
+    "galleryHeader galleryHeader galleryHeader"
+    "galleryArrowLeft galleryDisplay galleryArrowRight"
+    "imagesCollection imagesCollection imagesCollection";
+  justify-items: center;
+  align-items: center;
+}
+#galleryHeader {
+  grid-area: galleryHeader;
+  width: 100%;
+  text-align: center;
+  font-size: 2.5em;
+}
+#galleryArrowLeft {
+  grid-area: galleryArrowLeft;
+}
+#galleryArrowRight {
+  grid-area: galleryArrowRight;
+}
+#galleryArrowLeft,
+#galleryArrowRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+}
+#galleryDisplay {
+  grid-area: galleryDisplay;
+  width: 100%;
+  object-fit: cover;
+  height: 30em;
+  border-radius: 1em;
+}
+#imagesCollection {
+  grid-area: imagesCollection;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 3em;
+  border: none;
+}
+.pictures {
+  margin: 0.5em 0.5em;
+  height: 10em;
+  width: 12em;
+  object-fit: cover;
+  border-radius: 1em;
 }

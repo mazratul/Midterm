@@ -13,6 +13,11 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet"
   />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  />
+  <script src="./script.js"></script>
 
   <body>
     <!--Top Navigation Bar-->
@@ -22,6 +27,7 @@
       <a href="#publications" class="navItem" id="publicationsNav"
         >Publications</a
       >
+      <a href="#awards" class="navItem" id="awardsNav">Awards</a>
       <a href="#hobbies" class="navItem" id="hobbiesNav">Hobbies</a>
       <a href="#gallery" class="navItem" id="galleryNav">Gallery</a>
       <a href="#blogs" class="navItem" id="blogsNav">Blogs</a>
@@ -69,7 +75,7 @@
           contributions to quantum mechanics, and am thus a central figure in
           the revolutionary reshaping of the scientific understanding of nature
           that modern physics accomplished in the first decades of the twentieth
-          century. My mass–energy equivalence formula E = mc2, which arises from
+          century. My mass–energy equivalence formula E = mc<sup>2</sup>, which arises from
           relativity theory, has been called "the world's most famous equation".
           I received the 1921 Nobel Prize in Physics "for my services to
           theoretical physics, and especially for my discovery of the law of the
@@ -139,6 +145,50 @@
         </div>
       </section>
 
+      <section id="awards">
+        <h1 id="awardsHeader">Awards</h1>
+        <div class="awardItem" id="award1">
+          <img src="./images/awardImage1.png" alt="Nobel Prize in Physics" />
+          <h4>Nobel Prize in Physics</h4>
+          <span><i>1921</i></span>
+        </div>
+        <div class="awardItem" id="award2">
+          <img src="./images/awardImage2.jpg" alt="Prussian Academy of Sciences Membership" />
+          <h4>Prussian Academy of Sciences Membership</h4>
+          <span><i>1913</i></span>
+        </div>
+        <div class="awardItem" id="award3">
+          <img src="./images/awardImage3.jpg" alt="Doctorate of Medicine" />
+          <h4>Doctorate of Medicine</h4>
+          <span><i>1919</i></span>
+        </div>
+        <div class="awardItem" id="award7">
+          <img src="./images/awardImage7.png" alt="Doctor of Science Degree" />
+          <h4>Doctor of Science Degree</h4>
+          <span><i>1921</i></span>
+        </div>
+        <div class="awardItem" id="award4">
+          <img src="./images/awardImage4.jpg" alt="Copley Medal" />
+          <h4>Copley Medal</h4>
+          <span><i>1925</i></span>
+        </div>
+        <div class="awardItem" id="award5">
+          <img src="./images/awardImage5.jpg" alt="Gold Medal of the Royal Astronomical Society" />
+          <h4>Gold Medal of the Royal Astronomical Society</h4>
+          <span><i>1926</i></span>
+        </div>
+        <div class="awardItem" id="award6">
+          <img src="./images/awardImage6.png" alt="Prix Jules Janssen" />
+          <h4>Prix Jules Janssen</h4>
+          <span><i>1931</i></span>
+        </div>
+        <div class="awardItem" id="award8">
+          <img src="./images/awardImage8.jpg" alt="Prominent Americans Series" />
+          <h4>Prominent Americans Series</h4>
+          <span><i>1965 - 1978</i></span>
+        </div>
+      </section>
+
       <section id="hobbies">
         <h1 id="hobbiesHeader">Hobbies</h1>
         <div class="hobbyItem" id="puzzle">
@@ -156,6 +206,23 @@
         <div class="hobbyItem" id="essay">
           <img src="./images/essay.jpg" alt="Albert Einstein writing essay" />
           <h4>Writing</h4>
+        </div>
+      </section>
+
+      <section id="gallery">
+        <h1 id="galleryHeader">Gallery</h1>
+        <i class="material-icons" id="galleryArrowLeft" onclick="changeDisplayGalleryImage('left')">arrow_left</i>
+        <img src="" alt="" id="galleryDisplay" />
+        <i class="material-icons" id="galleryArrowRight" onclick="changeDisplayGalleryImage('right')">arrow_right</i>
+        <div id="imagesCollection">
+          <img src="./images/imageCollection1.jpg" alt="image1" class="pictures" />
+          <img src="./images/imageCollection2.jpg" alt="image2" class="pictures" />
+          <img src="./images/imageCollection3.jpg" alt="image3" class="pictures" />
+          <img src="./images/imageCollection4.jpg" alt="image4" class="pictures" />
+          <img src="./images/imageCollection5.jpg" alt="image5" class="pictures" />
+          <img src="./images/imageCollection6.jpg" alt="image6" class="pictures" />
+          <img src="./images/imageCollection7.jpg" alt="image7" class="pictures" />
+          <img src="./images/imageCollection8.jpg" alt="image8" class="pictures" />
         </div>
       </section>
     </main>
