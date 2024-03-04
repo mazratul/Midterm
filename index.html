@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Albert Einstein Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
 
   <link rel="stylesheet" href="style.css" />
@@ -31,14 +35,15 @@
       <a href="#hobbies" class="navItem" id="hobbiesNav">Hobbies</a>
       <a href="#gallery" class="navItem" id="galleryNav">Gallery</a>
       <a href="#blogs" class="navItem" id="blogsNav">Blogs</a>
-      <!-- <a
-          href="javascript:void(0);"
-          id="hamburger"
-          class="icon"
-          onclick="toggleHamburgerMenuIcon()"
-        >
-          <i class="fa fa-bars"></i>
-        </a> -->
+      <a href="#bottomLinks" class="navItem" id="connectMeNav">Connect Me</a>
+      <a
+        href="javascript:void(0);"
+        id="hamburger"
+        class="icon"
+        onclick="toggleHamburgerMenuIcon()"
+      >
+        <i class="fa fa-bars"></i>
+      </a>
     </header>
 
     <main>
@@ -75,73 +80,173 @@
           contributions to quantum mechanics, and am thus a central figure in
           the revolutionary reshaping of the scientific understanding of nature
           that modern physics accomplished in the first decades of the twentieth
-          century. My mass–energy equivalence formula E = mc<sup>2</sup>, which arises from
-          relativity theory, has been called "the world's most famous equation".
-          I received the 1921 Nobel Prize in Physics "for my services to
-          theoretical physics, and especially for my discovery of the law of the
-          photoelectric effect", a pivotal step in the development of quantum
-          theory. My work is also known for its influence on the philosophy of
-          science.In a 1999 poll of 130 leading physicists worldwide by the
-          British journal Physics World, I was ranked the greatest physicist of
-          all time. My intellectual achievements and originality have made the
-          word Einstein broadly synonymous with genius."
+          century. My mass–energy equivalence formula E = mc<sup>2</sup>, which
+          arises from relativity theory, has been called "the world's most
+          famous equation". I received the 1921 Nobel Prize in Physics "for my
+          services to theoretical physics, and especially for my discovery of
+          the law of the photoelectric effect", a pivotal step in the
+          development of quantum theory. My work is also known for its influence
+          on the philosophy of science.In a 1999 poll of 130 leading physicists
+          worldwide by the British journal Physics World, I was ranked the
+          greatest physicist of all time. My intellectual achievements and
+          originality have made the word Einstein broadly synonymous with
+          genius."
         </p>
       </section>
 
       <section id="publications">
         <h1 id="publicationsHeader">Publications</h1>
-        <div id="publicationsList">
-          <div class="publicationItem">
-            <img
-              src="./images/publicationImage.jpg"
-              alt="Publication Image"
-              class="paperImage"
-            />
-            <span class="paper"
-              ><b>Conclusions Drawn from the Phenomena of Capillarity: </b
-              >Intermolecular forces. The first of two papers in which Einstein
-              proposed the (incorrect) theory that the interactions between all
-              molecules are a universal function of distance, in analogy with
-              the inverse-square force of gravity. Once parameterized, his
-              theory makes reasonably accurate predictions for heavier
-              hydrophobic molecules, but fails for lighter molecules.</span
+        <div class="publicationItem" id="paper1">
+          <h4 class="paperTitle">
+            <a
+              href="http://www.physik.uni-augsburg.de/annalen/history/einstein-papers/1905_17_132-148.pdf"
+              target="_blank"
+              >On a Heuristic Viewpoint Concerning the Production and
+              Transformation of Light</a
             >
-            <span class="year"><i>Year Published: 1901</i></span>
-          </div>
-          <div class="publicationItem">
-            <img
-              src="./images/publicationImage.jpg"
-              alt="Publication Image"
-              class="paperImage"
-            />
-            <span class="paper"
-              ><b>Conclusions Drawn from the Phenomena of Capillarity: </b
-              >Intermolecular forces. The first of two papers in which Einstein
-              proposed the (incorrect) theory that the interactions between all
-              molecules are a universal function of distance, in analogy with
-              the inverse-square force of gravity. Once parameterized, his
-              theory makes reasonably accurate predictions for heavier
-              hydrophobic molecules, but fails for lighter molecules.</span
+          </h4>
+          <span class="areaOfFocus"
+            ><b>Area of Focus: </b>Photoelectric effect</span
+          >
+          <span class="paperPublishDate"><i>Date Published: 6/9/1905</i></span>
+          <span class="significance"
+            ><b>Significance: </b>Resolved an unsolved puzzle by suggesting that
+            energy is exchanged only in discrete amounts (quanta). This idea was
+            pivotal to the early development of quantum theory.</span
+          >
+          <i class="fa paperIcon">&#xf15c;</i>
+        </div>
+        <div class="publicationItem" id="paper2">
+          <h4 class="paperTitle">
+            <a
+              href="http://sedici.unlp.edu.ar/handle/10915/2785"
+              target="_blank"
+              >On the Motion of Small Particles Suspended in a Stationary
+              Liquid, as Required by the Molecular Kinetic Theory of Heat</a
             >
-            <span class="year"><i>Year Published: 1901</i></span>
-          </div>
-          <div class="publicationItem">
-            <img
-              src="./images/publicationImage.jpg"
-              alt="Publication Image"
-              class="paperImage"
-            />
-            <span class="paper"
-              ><b>Conclusions Drawn from the Phenomena of Capillarity: </b
-              >Intermolecular forces. The first of two papers in which Einstein
-              proposed the (incorrect) theory that the interactions between all
-              molecules are a universal function of distance, in analogy with
-              the inverse-square force of gravity. Once parameterized, his
-              theory makes reasonably accurate predictions for heavier
-              hydrophobic molecules, but fails for lighter molecules.</span
+          </h4>
+          <span class="areaOfFocus"><b>Area of Focus: </b>Brownian motion</span>
+          <span class="paperPublishDate"><i>Date Published: 7/18/1905</i></span>
+          <span class="significance"
+            ><b>Significance: </b>Explained empirical evidence for the atomic
+            theory, supporting the application of statistical physics.</span
+          >
+          <i class="fa paperIcon">&#xf15c;</i>
+        </div>
+        <div class="publicationItem" id="paper3">
+          <h4 class="paperTitle">
+            <a href="https://doi.org/10.1002%2Fandp.19053221004" target="_blank"
+              >On the Electrodynamics of Moving Bodies</a
             >
-            <span class="year"><i>Year Published: 1901</i></span>
-          </div>
+          </h4>
+          <span class="areaOfFocus"
+            ><b>Area of Focus: </b>Special relativity</span
+          >
+          <span class="paperPublishDate"><i>Date Published: 9/26/1905</i></span>
+          <span class="significance"
+            ><b>Significance: </b>Reconciled Maxwell's equations for electricity
+            and magnetism with the laws of mechanics by introducing changes to
+            mechanics, resulting from analysis based on empirical evidence that
+            the speed of light is independent of the motion of the observer.
+            Discredited the concept of a "luminiferous ether".</span
+          >
+          <i class="fa paperIcon">&#xf15c;</i>
+        </div>
+        <div class="publicationItem" id="paper4">
+          <h4 class="paperTitle">
+            <a
+              href="https://ui.adsabs.harvard.edu/abs/1905AnP...323..639E"
+              target="_blank"
+              >Does the Inertia of a Body Depend Upon Its Energy Content?</a
+            >
+          </h4>
+          <span class="areaOfFocus"
+            ><b>Area of Focus: </b>Matter–energy equivalence</span
+          >
+          <span class="paperPublishDate"
+            ><i>Date Published: 11/21/1905</i></span
+          >
+          <span class="significance"
+            ><b>Significance: </b>Equivalence of matter and energy, E =
+            mc<sup>2</sup>, the existence of "rest energy", and the basis of
+            nuclear energy.</span
+          >
+          <i class="fa paperIcon">&#xf15c;</i>
+        </div>
+        <div class="publicationItem" id="paper5">
+          <h4 class="paperTitle">
+            <a
+              href="https://www.nobelprize.org/prizes/physics/1921/einstein/lecture/"
+              target="_blank"
+              >Grundgedanken und Probleme der Relativitätstheorie</a
+            >
+          </h4>
+          <span class="areaOfFocus"
+            ><b>Area of Focus: </b>Fundamental Ideas and Problems of the Theory
+            of Relativity</span
+          >
+          <span class="paperPublishDate"><i>Date Published: 7/11/1923</i></span>
+          <span class="significance"
+            ><b>Significance: </b>Lecture delivered to the Nordic Assembly of
+            Naturalists at Gothenburg.</span
+          >
+          <i class="fa paperIcon">&#xf15c;</i>
+        </div>
+        <div class="publicationItem" id="paper6">
+          <h4 class="paperTitle">
+            <a
+              href="https://echo.mpiwg-berlin.mpg.de/ECHOdocuView?url=/permanent/echo/einstein/sitzungsberichte/PG8B073X/index.meta"
+              target="_blank"
+              >Quantentheorie des einatomigen idealen Gases</a
+            >
+          </h4>
+          <span class="areaOfFocus"
+            ><b>Area of Focus: </b>Quantum theory of monatomic ideal gases</span
+          >
+          <span class="paperPublishDate"><i>Date Published: 10/7/1924</i></span>
+          <span class="significance"
+            ><b>Significance: </b>First of a series of papers on this
+            topic.</span
+          >
+          <i class="fa paperIcon">&#xf15c;</i>
+        </div>
+        <div class="publicationItem" id="paper7">
+          <h4 class="paperTitle">
+            <a
+              href="https://en.wikipedia.org/wiki/Special:BookSources/978-3-88682-005-4"
+              target="_blank"
+              >Albert Einstein, Hedwig und Max Born: Briefwechsel 1916–1955</a
+            >
+          </h4>
+          <span class="areaOfFocus"
+            ><b>Area of Focus: </b>Correspondence between Albert Einstein and
+            Hedwig and Max Born</span
+          >
+          <span class="paperPublishDate"><i>Date Published: 1969</i></span>
+          <span class="significance"
+            ><b>Significance: </b>Commented by Max Born; Preface by Bertrand
+            Russell; Foreword by Werner Heisenberg.</span
+          >
+          <i class="fa paperIcon">&#xf15c;</i>
+        </div>
+        <div class="publicationItem" id="paper8">
+          <h4 class="paperTitle">
+            <a
+              href="https://einsteinpapers.press.princeton.edu/"
+              target="_blank"
+              >The Collected Papers of Albert Einstein</a
+            >
+          </h4>
+          <span class="areaOfFocus"
+            ><b>Area of Focus: </b>Collection of Albert Einstein's papers</span
+          >
+          <span class="paperPublishDate"><i>Date Published: 7/21/2008</i></span>
+          <span class="significance"
+            ><b>Significance: </b>Edited by John Stachel, Martin J. Klein, A. J.
+            Kox, Michel Janssen, R. Schulmann, Diana Komos Buchwald, et al.
+            Volumes 1–10.</span
+          >
+          <i class="fa paperIcon">&#xf15c;</i>
         </div>
       </section>
 
@@ -153,7 +258,10 @@
           <span><i>1921</i></span>
         </div>
         <div class="awardItem" id="award2">
-          <img src="./images/awardImage2.jpg" alt="Prussian Academy of Sciences Membership" />
+          <img
+            src="./images/awardImage2.jpg"
+            alt="Prussian Academy of Sciences Membership"
+          />
           <h4>Prussian Academy of Sciences Membership</h4>
           <span><i>1913</i></span>
         </div>
@@ -173,7 +281,10 @@
           <span><i>1925</i></span>
         </div>
         <div class="awardItem" id="award5">
-          <img src="./images/awardImage5.jpg" alt="Gold Medal of the Royal Astronomical Society" />
+          <img
+            src="./images/awardImage5.jpg"
+            alt="Gold Medal of the Royal Astronomical Society"
+          />
           <h4>Gold Medal of the Royal Astronomical Society</h4>
           <span><i>1926</i></span>
         </div>
@@ -183,7 +294,10 @@
           <span><i>1931</i></span>
         </div>
         <div class="awardItem" id="award8">
-          <img src="./images/awardImage8.jpg" alt="Prominent Americans Series" />
+          <img
+            src="./images/awardImage8.jpg"
+            alt="Prominent Americans Series"
+          />
           <h4>Prominent Americans Series</h4>
           <span><i>1965 - 1978</i></span>
         </div>
@@ -211,20 +325,184 @@
 
       <section id="gallery">
         <h1 id="galleryHeader">Gallery</h1>
-        <i class="material-icons" id="galleryArrowLeft" onclick="changeDisplayGalleryImage('left')">arrow_left</i>
+        <i
+          class="material-icons"
+          id="galleryArrowLeft"
+          onclick="changeDisplayGalleryImage('left')"
+          >arrow_left</i
+        >
         <img src="" alt="" id="galleryDisplay" />
-        <i class="material-icons" id="galleryArrowRight" onclick="changeDisplayGalleryImage('right')">arrow_right</i>
+        <i
+          class="material-icons"
+          id="galleryArrowRight"
+          onclick="changeDisplayGalleryImage('right')"
+          >arrow_right</i
+        >
         <div id="imagesCollection">
-          <img src="./images/imageCollection1.jpg" alt="image1" class="pictures" />
-          <img src="./images/imageCollection2.jpg" alt="image2" class="pictures" />
-          <img src="./images/imageCollection3.jpg" alt="image3" class="pictures" />
-          <img src="./images/imageCollection4.jpg" alt="image4" class="pictures" />
-          <img src="./images/imageCollection5.jpg" alt="image5" class="pictures" />
-          <img src="./images/imageCollection6.jpg" alt="image6" class="pictures" />
-          <img src="./images/imageCollection7.jpg" alt="image7" class="pictures" />
-          <img src="./images/imageCollection8.jpg" alt="image8" class="pictures" />
+          <img
+            src="./images/imageCollection1.jpg"
+            alt="image1"
+            class="pictures"
+            id="image1"
+          />
+          <img
+            src="./images/imageCollection2.jpg"
+            alt="image2"
+            class="pictures"
+            id="image2"
+          />
+          <img
+            src="./images/imageCollection3.jpg"
+            alt="image3"
+            class="pictures"
+            id="image3"
+          />
+          <img
+            src="./images/imageCollection4.jpg"
+            alt="image4"
+            class="pictures"
+            id="image4"
+          />
+          <img
+            src="./images/imageCollection5.jpg"
+            alt="image5"
+            class="pictures"
+            id="image5"
+          />
+          <img
+            src="./images/imageCollection6.jpg"
+            alt="image6"
+            class="pictures"
+            id="image6"
+          />
+          <img
+            src="./images/imageCollection7.jpg"
+            alt="image7"
+            class="pictures"
+            id="image7"
+          />
+          <img
+            src="./images/imageCollection8.jpg"
+            alt="image8"
+            class="pictures"
+            id="image8"
+          />
+          <img
+            src="./images/imageCollection9.jpg"
+            alt="image9"
+            class="pictures"
+            id="image9"
+          />
+          <img
+            src="./images/imageCollection10.jpg"
+            alt="image10"
+            class="pictures"
+            id="image10"
+          />
+          <img
+            src="./images/imageCollection11.jpg"
+            alt="image11"
+            class="pictures"
+            id="image11"
+          />
+          <img
+            src="./images/imageCollection12.jpg"
+            alt="image12"
+            class="pictures"
+            id="image12"
+          />
+        </div>
+      </section>
+
+      <section id="blogs">
+        <h1 id="blogsHeader">Blogs</h1>
+        <div id="blogsList">
+          <div class="blogItem">
+            <h4 class="blogTitle">On the Nature of Light</h4>
+            <p class="blogDescription">
+              In contemplating the enigmatic dance of photons, I find myself
+              drawn into a cosmic waltz of boundless wonder. Light, a curious
+              entity, reveals itself as both wave and particle, defying
+              conventional thought at every turn. It whispers secrets of the
+              universe, weaving a tapestry of space-time that enraptures the
+              mind and soul alike. Through the lens of relativity, I glimpse the
+              intricate symphony of electromagnetism, where time bends and space
+              contracts in an intricate ballet of cosmic proportions.
+            </p>
+            <img class="blogImage" src="./images/light.jpg" alt="Blog Image" />
+            <span class="blogDate"><i>Date Posted: 3/3/2024</i></span>
+          </div>
+          <div class="blogItem">
+            <h4 class="blogTitle">Musings on Time and Space</h4>
+            <p class="blogDescription">
+              As I traverse the labyrinth of time and space, I am struck by the
+              profound interconnectedness of all things. Time, that elusive
+              river, flows inexorably forward, carrying us along its currents
+              like leaves adrift in the wind. Yet, in the realm of relativity,
+              time becomes malleable, bending and warping in the presence of
+              mass and energy. Space, too, reveals its mysteries, stretching and
+              compressing to accommodate the cosmic dance of celestial bodies.
+              In this grand cosmic ballet, I find solace in the beauty of
+              mathematical elegance, where equations serve as the language of
+              the universe.
+            </p>
+            <img
+              class="blogImage"
+              src="./images/time-space.jpg"
+              alt="Blog Image"
+            />
+            <span class="blogDate"><i>Date Posted: 3/3/2024</i></span>
+          </div>
+          <div class="blogItem">
+            <h4 class="blogTitle">Dreams of Quantum Reality</h4>
+            <p class="blogDescription">
+              In the realm of the quantum, reality takes on a surreal and
+              bewildering guise, defying the laws of classical physics with its
+              paradoxical nature. Here, particles exist in a state of
+              superposition, occupying multiple states simultaneously until
+              observed, while entanglement binds distant particles in an
+              inexplicable dance of cosmic connection. It is a world where
+              probability reigns supreme, and uncertainty becomes the
+              cornerstone of existence. As I peer into the quantum abyss, I am
+              humbled by the vastness of the unknown, yet emboldened by the
+              prospect of unlocking the secrets of the universe.
+            </p>
+            <img
+              class="blogImage"
+              src="./images/quantum-reality.jpg"
+              alt="Blog Image"
+            />
+            <span class="blogDate"><i>Date Posted: 3/3/2024</i></span>
+          </div>
+        </div>
+        <div id="blogInput">
+          <input type="text" id="blogTitleInput" placeholder="Blog Title" />
+          <textarea
+            name="blogDescriptionInput"
+            id="blogDescriptionInput"
+            cols="30"
+            rows="15"
+            placeholder="Blog Description"
+          ></textarea>
+          <input
+            type="file"
+            id="blogImageInput"
+            placeholder="Choose blog image"
+            accept="image/png, image/jpeg"
+          />
+          <button id="postBlog" onclick="postBlogOnWebsite()">Post Blog</button>
         </div>
       </section>
     </main>
+    <!--Bottom Links-->
+    <footer id="bottomLinks">
+      <div class="socialLinks">
+        <i id="email" class="fa">&#xf0e0;</i>
+        <i id="twitter" class="fa">&#xf081;</i>
+        <i id="instagram" class="fa">&#xf16d;</i>
+        <i id="youtube" class="fa">&#xf16a;</i>
+      </div>
+      <p id="copyright">&copy; 2024 Albert Einstein. All rights reserved.</p>
+    </footer>
   </body>
 </html>

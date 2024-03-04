@@ -18,24 +18,34 @@ p {
 }
 
 #navbar {
+  background-color: slateblue;
+  padding: 1.5vh 00 1.5vh 00;
+  overflow: hidden;
   width: 100%;
-  background-color: black;
-  height: 2.5em;
-  display: grid;
   position: fixed;
-  top: 0;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "hiThereNav aboutMeNav publicationsNav awardsNav hobbiesNav galleryNav blogsNav";
-  justify-items: center;
-  place-items: center;
 }
 
 .navItem {
+  float: left;
+  display: block;
+  margin: 0 1.25%;
+  width: 10%;
+  font-size: 1.15vw;
+  text-align: center;
   text-decoration: none;
-  color: white;
-  cursor: pointer;
-  font-size: 1em;
+  color: snow;
+  font-weight: bold;
+  border-radius: 1em;
+  height: 4vh;
+  padding: 0.5vh 0 0.5vh 0;
+}
+
+.navItem:hover {
+  background-color: rgba(99, 99, 99, 0.5);
+}
+
+.icon {
+  display: none;
 }
 
 #hiThereNav {
@@ -59,17 +69,23 @@ p {
 #blogsNav {
   grid-area: blogsNav;
 }
+#connectMeNav {
+  grid-area: connectMeNav;
+}
 
 #hiThere {
   display: grid;
+  background-color: slateblue;
   width: 100%;
+  height: 100vh;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.8fr 0.2fr;
+  grid-template-rows: 0.9fr 0.1fr;
   grid-template-areas:
     "hello tongueOutImage albertEinstein"
     "quote quote quote";
   place-items: center;
   justify-items: center;
+  padding-bottom: 2em;
 }
 #hello {
   grid-area: hello;
@@ -98,115 +114,178 @@ p {
 #aboutMe {
   display: grid;
   width: 100%;
+  min-height: 100vh;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.1fr 0.9fr;
   grid-template-areas:
     "aboutMeHeader aboutMeHeader"
     "myImage myDescription";
   justify-items: center;
+  background-color: rgb(211, 211, 211);
+  padding-bottom: 2em;
+  padding-top: 2em;
 }
 #aboutMeHeader {
   grid-area: aboutMeHeader;
   width: 100%;
   text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
   font-size: 2.5em;
 }
 #myImage {
   grid-area: myImage;
   object-fit: cover;
-  width: 70%;
-  height: 80%;
+  max-width: 80%;
+  height: auto;
   border-radius: 1em;
-  margin-left: 2.5em;
+  margin: 0 2.5em 0 5em;
 }
 #myDescription {
   grid-area: myDescription;
-  width: 70%;
-  height: 80%;
+  max-width: 80%;
+  height: auto;
   font-size: 1.1em;
-  text-overflow: ellipsis;
-  overflow-y: hidden;
-  margin-right: 2.5em;
+  margin: 0 5em 0 2.5em;
 }
 
 #publications {
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.1fr 0.9fr;
+  min-height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 0.225fr 0.225fr 0.225fr 0.225fr;
   grid-template-areas:
-    "publicationsHeader"
-    "publicationsList";
+    "publicationsHeader publicationsHeader"
+    "paper1 paper2"
+    "paper3 paper4"
+    "paper5 paper6"
+    "paper7 paper8";
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 2em;
+  align-items: center;
+  column-gap: 1em;
+  row-gap: 1em;
   justify-items: center;
+  background-color: #716104;
+  padding-top: 2em;
 }
 #publicationsHeader {
   grid-area: publicationsHeader;
   width: 100%;
   text-align: center;
   font-size: 2.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
-#publicationsList {
-  grid-area: publicationsList;
-  width: 100%;
-  height: 100%;
-  padding: 0 2em;
+#paper1 {
+  grid-area: paper1;
+}
+#paper2 {
+  grid-area: paper2;
+}
+#paper3 {
+  grid-area: paper3;
+}
+#paper4 {
+  grid-area: paper4;
+}
+#paper5 {
+  grid-area: paper5;
+}
+#paper6 {
+  grid-area: paper6;
+}
+#paper7 {
+  grid-area: paper7;
+}
+#paper8 {
+  grid-area: paper8;
 }
 
 .publicationItem {
   display: grid;
-  grid-template-columns: 0.3fr 0.7fr;
-  grid-template-rows: 0.9fr 0.1fr;
+  grid-template-columns: 0.7fr 0.3fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas:
-    "paperImage paper"
-    "paperImage year";
+    "paperTitle paperTitle"
+    "areaOfFocus areaOfFocus"
+    "significance significance"
+    "paperPublishDate paperIcon";
   justify-items: center;
+  align-items: stretch;
   width: 100%;
-  column-gap: 1em;
   padding: 1em;
+  height: 20em;
   border-radius: 1em;
+  row-gap: 0.5em;
   box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+  background-color: snow;
 }
 
-.year {
-  grid-area: year;
+.paperPublishDate {
+  grid-area: paperPublishDate;
+  width: 100%;
   text-align: left;
-  width: 100%;
-  font-size: 1em;
+  margin-top: auto;
+  font-size: 0.8em;
 }
-.paper {
-  grid-area: paper;
-  text-align: left;
+.areaOfFocus {
+  grid-area: areaOfFocus;
   width: 100%;
-  font-size: 1.2em;
 }
-
-.paperImage {
-  grid-area: paperImage;
+.paperTitle {
+  grid-area: paperTitle;
   width: 100%;
-  height: 12em;
-  object-fit: cover;
-  border-radius: 1em;
+}
+.paperTitle a {
+  text-decoration: none;
+  color: black;
+}
+.paperTitle a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.significance {
+  grid-area: significance;
+  width: 100%;
+}
+.paperIcon {
+  grid-area: paperIcon;
+  margin-left: auto;
+  margin-top: auto;
+  font-size: 2em;
 }
 
 #awards {
   display: grid;
   width: 100%;
+  min-height: 100vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.1fr 0.45fr 0.45fr;
   grid-template-areas:
     "awardsHeader awardsHeader awardsHeader awardsHeader"
     "award1 award2 award3 award7"
     "award5 award6 award4 award8";
-    column-gap: 1em;
   justify-items: center;
+  align-items: center;
   padding-left: 1em;
+  column-gap: 1em;
+  row-gap: 1em;
   padding-right: 1em;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  background-color: #293745;
 }
 #awardsHeader {
   grid-area: awardsHeader;
   width: 100%;
   text-align: center;
   font-size: 2.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  color: snow;
 }
 #award1 {
   grid-area: award1;
@@ -236,19 +315,20 @@ p {
 .awardItem {
   height: 27em;
   width: 100%;
-  padding: 0 1em;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 1em;
   box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+  background-color: snow;
+  padding: 0.5em;
 }
 .awardItem img {
   height: 20em;
   width: 100%;
   border-radius: 1em;
   object-fit: cover;
-  
 }
 .awardItem h4 {
   width: 100%;
@@ -258,24 +338,34 @@ p {
 .awardItem span {
   width: 100%;
   text-align: center;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 #hobbies {
   display: grid;
   width: 100%;
+  min-height: 100vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.1fr 0.9fr;
   grid-template-areas:
     "hobbiesHeader hobbiesHeader hobbiesHeader hobbiesHeader"
     "puzzle book violin essay";
   justify-items: center;
+  padding-left: 1em;
+  column-gap: 1em;
+  padding-right: 1em;
+  align-items: center;
+  padding-top: 2em;
+  background-color: #19786b;
+  padding-bottom: 2em;
 }
 #hobbiesHeader {
   grid-area: hobbiesHeader;
   width: 100%;
   text-align: center;
   font-size: 2.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 #puzzle {
   grid-area: puzzle;
@@ -291,47 +381,54 @@ p {
 }
 
 .hobbyItem img {
-  object-fit: cover;
-  height: 25em;
+  height: 20em;
   width: 100%;
   border-radius: 1em;
+  object-fit: cover;
 }
 
 .hobbyItem h4 {
   text-align: center;
   font-size: 1.5em;
   width: 100%;
-  height: 2.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .hobbyItem {
-  width: 90%;
-  height: 30em;
-  padding: 1em;
+  height: 23em;
+  width: 100%;
+  display: flex;
+  padding: 0.5em;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 1em;
   box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+  background-color: snow;
 }
 
 #gallery {
   display: grid;
   width: 100%;
+  min-height: 100vh;
   grid-template-columns: 0.2fr 0.6fr 0.2fr;
-  grid-template-rows: 0.1fr 0.5fr 0.4fr;
+  grid-template-rows: 0.1fr 0.4fr 0.5fr;
   grid-template-areas:
     "galleryHeader galleryHeader galleryHeader"
     "galleryArrowLeft galleryDisplay galleryArrowRight"
     "imagesCollection imagesCollection imagesCollection";
   justify-items: center;
   align-items: center;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  background-color: whitesmoke;
 }
 #galleryHeader {
   grid-area: galleryHeader;
   width: 100%;
   text-align: center;
   font-size: 2.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 #galleryArrowLeft {
   grid-area: galleryArrowLeft;
@@ -355,23 +452,570 @@ p {
   grid-area: galleryDisplay;
   width: 100%;
   object-fit: cover;
-  height: 30em;
+  height: 70vh;
   border-radius: 1em;
+  margin-bottom: 1em;
 }
 #imagesCollection {
   grid-area: imagesCollection;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding-top: 3em;
-  border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  grid-template-areas:
+    "image1 image2 image3 image4 image5 image6"
+    "image7 image8 image9 image10 image11 image12";
 }
 .pictures {
-  margin: 0.5em 0.5em;
   height: 10em;
-  width: 12em;
+  width: 100%;
   object-fit: cover;
   border-radius: 1em;
+}
+
+#image1 {
+  grid-area: image1;
+}
+#image2 {
+  grid-area: image2;
+}
+#image2 {
+  grid-area: image2;
+}
+#image3 {
+  grid-area: image3;
+}
+#image4 {
+  grid-area: image4;
+}
+#image5 {
+  grid-area: image5;
+}
+#image6 {
+  grid-area: image6;
+}
+#image7 {
+  grid-area: image7;
+}
+#image8 {
+  grid-area: image8;
+}
+#image9 {
+  grid-area: image9;
+}
+#image10 {
+  grid-area: image10;
+}
+#image11 {
+  grid-area: image11;
+}
+#image12 {
+  grid-area: image12;
+}
+
+#blogs {
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.6fr 0.3fr;
+  grid-template-areas:
+    "blogsHeader"
+    "blogsList"
+    "blogInput";
+  justify-items: center;
+  align-items: stretch;
+  background-color: #03244a;
+  padding-top: 2em;
+}
+#blogsHeader {
+  grid-area: blogsHeader;
+  width: 100%;
+  text-align: center;
+  font-size: 2.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  color: aliceblue;
+}
+#blogsList {
+  grid-area: blogsList;
+  width: 100%;
+  height: 100%;
+  padding: 0 1em;
+}
+#blogInput {
+  grid-area: blogInput;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.6fr 0.2fr 0.1fr;
+  grid-template-areas:
+    "blogTitleInput"
+    "blogDescriptionInput"
+    "blogImageInput"
+    "postBlog";
+  row-gap: 1em;
+  padding: 5em;
+  background-color: #1b3433;
+}
+
+#blogTitleInput {
+  grid-area: blogTitleInput;
+  border-radius: 0.4em;
+  padding: 1em;
+  width: 100%;
+  border: 1px solid gray;
+}
+#blogDescriptionInput {
+  grid-area: blogDescriptionInput;
+  border-radius: 0.4em;
+  padding: 1em;
+  width: 100%;
+  border: 1px solid gray;
+}
+#blogImageInput {
+  grid-area: blogImageInput;
+  width: 100%;
+  cursor: pointer;
+}
+#postBlog {
+  grid-area: postBlog;
+  background-color: #405cf5;
+  border-radius: 0.5em;
+  border-width: 0;
+  color: #fff;
+  cursor: pointer;
+  height: 3em;
+  width: 30vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blogItem {
+  display: grid;
+  grid-template-columns: 0.7fr 0.3fr;
+  grid-template-rows: 0.15fr 0.9fr 0.05fr;
+  grid-template-areas:
+    "blogTitle blogImage"
+    "blogDescription blogImage"
+    "blogDate blogImage";
+  width: 100%;
+  justify-items: center;
+  align-items: stretch;
+  height: 20em;
+  column-gap: 1em;
+  row-gap: 0.5em;
+  padding: 1em;
+  border-radius: 1em;
+  margin-bottom: 1em;
+  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+  background-color: snow;
+}
+
+.blogTitle {
+  grid-area: blogTitle;
+  width: 100%;
+  font-size: 1.2em;
+}
+.blogDescription {
+  grid-area: blogDescription;
+  width: 100%;
+  font-size: 1em;
+  overflow-wrap: break-word;
+}
+
+.blogDate {
+  grid-area: blogDate;
+  width: 100%;
+  text-align: left;
+  margin-top: auto;
+  font-size: 0.8em;
+}
+
+.blogImage {
+  grid-area: blogImage;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1em;
+}
+
+#bottomLinks {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "socialLinks"
+    "copyright";
+  padding: 2em 0;
+  justify-items: center;
+  row-gap: 1em;
+  align-items: center;
+  background-color: black;
+  color: snow;
+}
+
+.socialLinks {
+  grid-area: socialLinks;
+}
+
+#copyright {
+  grid-area: copyright;
+  font-size: 1em;
+}
+
+.socialLinks i {
+  cursor: pointer;
+  font-size: 3em;
+  margin: 0 0.3em;
+}
+
+@media only screen and (max-width: 500px) {
+  #navbar{
+    position: static;
+  }
+  .navItem {
+    display: none;
+  }
+  #navbar #hamburger {
+    float: right;
+    display: block;
+    color: white;
+    margin: 1vw 2vw 0 0;
+  }
+  #navbar.responsive {
+    position: relative;
+    padding-top: 3vh;
+  }
+  #navbar.responsive #hamburger {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  #navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .navItem {
+    font-size: 2.5vw;
+    padding-left: 1vh;
+    margin: 1vh;
+    width: auto;
+  }
+
+  #navBar::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #hiThere {
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.4fr 0.2fr 0.2fr;
+    grid-template-areas:
+      "hello"
+      "tongueOutImage"
+      "albertEinstein"
+      "quote";
+    padding: 0 1em;
+  }
+  #hello {
+    font-size: 2em;
+  }
+  #tongueOutImage {
+    height: 50vh;
+    margin-top: 1em;
+  }
+  #albertEinstein {
+    font-size: 2em;
+    margin-top: 1em;
+  }
+  #quote {
+    font-size: 1em;
+    margin-top: 1em;
+  }
+
+  #aboutMe {
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.45fr 0.45fr;
+    grid-template-areas:
+      "aboutMeHeader"
+      "myImage"
+      "myDescription";
+    padding-bottom: 1em;
+  }
+  #aboutMeHeader {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 2em;
+  }
+  #myImage {
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+  }
+  #myDescription {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #publications {
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.12fr 0.12fr 0.12fr 0.12fr 0.12fr 0.12fr 0.12fr 0.12fr;
+    grid-template-areas:
+      "publicationsHeader"
+      "paper1"
+      "paper2"
+      "paper3"
+      "paper4"
+      "paper5"
+      "paper6"
+      "paper7"
+      "paper8";
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    align-items: center;
+    row-gap: 1em;
+    justify-items: center;
+    padding-top: 2em;
+  }
+  #publicationsHeader {
+    font-size: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  #awards {
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.1125fr 0.1125fr 0.1125fr 0.1125fr 0.1125fr 0.1125fr 0.1125fr 0.1125fr;
+    grid-template-areas:
+      "awardsHeader"
+      "award1"
+      "award2"
+      "award3"
+      "award7"
+      "award5"
+      "award6"
+      "award4"
+      "award8";
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    align-items: center;
+    row-gap: 1em;
+    justify-items: center;
+    padding-top: 2em;
+  }
+  #awardsHeader {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 2em;
+  }
+
+  #hobbies {
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.225fr 0.225fr 0.225fr 0.225fr;
+    grid-template-areas:
+      "hobbiesHeader"
+      "puzzle"
+      "book"
+      "violin"
+      "essay";
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    align-items: center;
+    row-gap: 1em;
+    justify-items: center;
+    padding-top: 2em;
+  }
+  #hobbiesHeader {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 2em;
+  }
+
+  .hobbyItem {
+    height: 24em;
+  }
+
+  #gallery {
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 9fr;
+    grid-template-areas:
+      "galleryHeader"
+      "imagesCollection";
+    padding-bottom: 1em;
+    align-items: center;
+    row-gap: 1em;
+    justify-items: center;
+    padding-top: 2em;
+  }
+  #galleryArrowLeft,
+  #galleryArrowRight,
+  #galleryDisplay {
+    display: none;
+  }
+  #galleryHeader {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 2em;
+  }
+
+  #imagesCollection {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "image1"
+      "image2"
+      "image3"
+      "image4"
+      "image5"
+      "image6"
+      "image7"
+      "image8"
+      "image9"
+      "image10"
+      "image11"
+      "image12";
+  }
+  .pictures {
+    height: 20em;
+  }
+
+  #blogs {
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.7fr 0.2fr;
+    grid-template-areas:
+      "blogsHeader"
+      "blogsList"
+      "blogInput";
+    padding-bottom: 1em;
+    align-items: center;
+    row-gap: 1em;
+    justify-items: center;
+    padding-top: 2em;
+  }
+  #blogsHeader {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 2em;
+  }
+  #blogsList {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0;
+  }
+  #blogInput {
+    grid-area: blogInput;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.6fr 0.2fr 0.1fr;
+    grid-template-areas:
+      "blogTitleInput"
+      "blogDescriptionInput"
+      "blogImageInput"
+      "postBlog";
+    row-gap: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: #1b3433;
+  }
+
+  #blogTitleInput {
+    grid-area: blogTitleInput;
+    border-radius: 0.4em;
+    padding: 1em;
+    width: 100%;
+    border: 1px solid gray;
+  }
+  #blogDescriptionInput {
+    grid-area: blogDescriptionInput;
+    border-radius: 0.4em;
+    padding: 1em;
+    width: 100%;
+    border: 1px solid gray;
+  }
+  #blogImageInput {
+    grid-area: blogImageInput;
+    width: 100%;
+    cursor: pointer;
+  }
+  #postBlog {
+    height: 3em;
+    width: 100%;
+  }
+
+  .blogItem {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.15fr 0.7fr 0.05fr;
+    grid-template-areas:
+      "blogImage"
+      "blogTitle"
+      "blogDescription"
+      "blogDate";
+    width: 100%;
+    justify-items: center;
+    align-items: stretch;
+    height: auto;
+    row-gap: 0.5em;
+    padding: 0.5em;
+  }
+
+  .blogTitle {
+    text-align: center;
+  }
+
+  .blogDate {
+    text-align: center;
+  }
+
+  .blogImage {
+    height: 15em;
+  }
+
+  #copyright {
+    font-size: 1em;
+  }
+
+  .socialLinks i {
+    font-size: 2em;
+  }
 }
