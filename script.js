@@ -1,3 +1,6 @@
+// *code formatted using Prettier VS Code Extension
+
+// an immutable constant array containing objects with information for gallery images
 const galleryCollection = [
   {
     id: "image1",
@@ -73,6 +76,7 @@ const galleryCollection = [
   },
 ];
 
+// a mutable array containing objects with information for blogs
 let blogs = [
   {
     title: "ABCD",
@@ -90,35 +94,50 @@ let blogs = [
   },
 ];
 
+// a function to display the first image of the galleryCollection array on the bigger gallery display section
 function displayGalleryImageOnLoad() {
   let bigImage = document.querySelector("#galleryDisplay");
   bigImage.src = galleryCollection[0].source;
   bigImage.alt = galleryCollection[0].altTag;
 }
 
+// execute the displayGalleryImageOnLoad function as soon as the webpage loads
 window.onload = displayGalleryImageOnLoad;
 
+// a function to switch between available images in the galleryCollection array and display them on the bigger gallery display section
 function changeDisplayGalleryImage(arrowDirection) {
   let bigImage = document.querySelector("#galleryDisplay");
+
+  // execute the following code if the user clicks "left" arrow button
   if (arrowDirection === "left") {
     let currentImageIndex;
+
+    // find and get the index of the current image displayed on the bigger gallery display section
     for (let i = 0; i < galleryCollection.length; i++) {
       if (bigImage.getAttribute("src") === galleryCollection[i].source) {
         currentImageIndex = i;
       }
     }
+
+    // get the previous image in the array and set the required img tag attribute values
     if (currentImageIndex > 0) {
       let newImageIndex = currentImageIndex - 1;
       bigImage.src = galleryCollection[newImageIndex].source;
       bigImage.alt = galleryCollection[newImageIndex].altTag;
     }
-  } else {
+  }
+  // execute the following code if the user clicks "right" arrow button
+  else {
     let currentImageIndex;
+
+    // find and get the index of the current image displayed on the bigger gallery display section
     for (let i = 0; i < galleryCollection.length; i++) {
       if (bigImage.getAttribute("src") === galleryCollection[i].source) {
         currentImageIndex = i;
       }
     }
+
+    // get the next image in the array and set the required img tag attribute values
     if (currentImageIndex < galleryCollection.length - 1) {
       let newImageIndex = currentImageIndex + 1;
       bigImage.src = galleryCollection[newImageIndex].source;
@@ -127,12 +146,14 @@ function changeDisplayGalleryImage(arrowDirection) {
   }
 }
 
+// a function to take and store user input for creating a blog and displaying it on the screen inside the blogs section
 function postBlogOnWebsite() {
   let titleFromInput = document.querySelector("#blogTitleInput");
   let descriptionFromInput = document.querySelector("#blogDescriptionInput");
   let imageFromInput = document.querySelector("#blogImageInput");
   let dateFromSystem = new Date();
 
+  // create a new blog object and set the attribute values to user entered values
   let newBlog = {
     title: titleFromInput.value,
     description: descriptionFromInput.value,
@@ -146,43 +167,55 @@ function postBlogOnWebsite() {
       dateFromSystem.getFullYear(),
   };
 
+  // create div element for the new blog and add appropriate class name
   let newBlogItem = document.createElement("div");
   newBlogItem.className = "blogItem";
 
+  // create h4 element and set appropriate class name and text content
   let newBlogTitle = document.createElement("h4");
   newBlogTitle.className = "blogTitle";
   newBlogTitle.textContent = newBlog.title;
 
+  // create p element and set appropriate class name and text content
   let newBlogDescription = document.createElement("p");
   newBlogDescription.className = "blogDescription";
   newBlogDescription.textContent = newBlog.description;
 
+  // create img element and set appropriate class name, src and alt
   let newBlogImage = document.createElement("img");
   newBlogImage.className = "blogImage";
   newBlogImage.src = newBlog.imageSource;
   newBlogImage.alt = "Blog Image";
 
+  // create span element and set appropriate class name
   let newBlogDate = document.createElement("span");
   newBlogDate.className = "blogDate";
+
+  // create i element and set appropriate text content
   let newBlogDateItalic = document.createElement("i");
   newBlogDateItalic.textContent = "Date Posted: " + newBlog.datePosted;
+
+  // append i element to span element
   newBlogDate.appendChild(newBlogDateItalic);
 
-  newBlogItem.appendChild(newBlogTitle);
-  newBlogItem.appendChild(newBlogDescription);
-  newBlogItem.appendChild(newBlogImage);
-  newBlogItem.appendChild(newBlogDate);
+  newBlogItem.appendChild(newBlogTitle); // append h4 element to div element
+  newBlogItem.appendChild(newBlogDescription); // append p element to div element
+  newBlogItem.appendChild(newBlogImage); // append img element to div element
+  newBlogItem.appendChild(newBlogDate); // append span element to div element
 
+  // add the new blog object at the first of blogs array
   blogs.unshift(newBlog);
 
   let blogsListSection = document.querySelector("#blogsList");
-  blogsListSection.prepend(newBlogItem);
+  blogsListSection.prepend(newBlogItem); // append the div element to the blogsList section as the first child
 
+  // clear user inputs after adding the new blog item
   titleFromInput.value = "";
   descriptionFromInput.value = "";
   imageFromInput.value = null;
 }
 
+// a function to toggle the hamburger menu on and off on mobile view
 function toggleHamburgerMenuIcon() {
   let myNavbar = document.querySelector("#navbar");
   if (myNavbar.classList.length === 0) {

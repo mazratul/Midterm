@@ -1,3 +1,4 @@
+<!-- code formatted using Prettier VS Code Extension -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,6 +29,7 @@
     <header id="navbar">
       <a href="#hiThere" class="navItem" id="hiThereNav">Hi There!</a>
       <a href="#aboutMe" class="navItem" id="aboutMeNav">About Me</a>
+      <a href="#scientificCareer" class="navItem" id="careerNav">Career</a>
       <a href="#publications" class="navItem" id="publicationsNav"
         >Publications</a
       >
@@ -47,6 +49,7 @@
     </header>
 
     <main>
+      <!-- Webpage Landing Section -->
       <section id="hiThere">
         <h1 id="hello">Hi <br />There!</h1>
         <img
@@ -66,6 +69,7 @@
         >
       </section>
 
+      <!-- About Me Section -->
       <section id="aboutMe">
         <h1 id="aboutMeHeader">About Me</h1>
         <img
@@ -94,16 +98,75 @@
         </p>
       </section>
 
+      <!-- Career Section  -->
+      <section id="scientificCareer">
+        <h1 id="scientificCareerHeader">Career</h1>
+        <!-- career info headings -->
+        <div id="careerTableHeader">
+          <h4>Years</h4>
+          <h4>Institution</h4>
+          <h4>Role</h4>
+        </div>
+        <!-- career1 info -->
+        <div class="careerItem" id="career1">
+          <span><i>1908–1909</i></span>
+          <span> University of Bern</span>
+          <span>Junior Teaching Position</span>
+        </div>
+        <!-- career2 info -->
+        <div class="careerItem" id="career2">
+          <span><i>1909–1911</i></span>
+          <span>University of Zurich</span>
+          <span>Lecturer on Relativistic Electrodynamics</span>
+        </div>
+        <!-- career3 info -->
+        <div class="careerItem" id="career3">
+          <span><i>1911–1912</i></span>
+          <span>Charles University in Prague</span>
+          <span>Chair</span>
+        </div>
+        <!-- career4 info -->
+        <div class="careerItem" id="career4">
+          <span><i>1912–1914</i></span>
+          <span>ETH Zurich</span>
+          <span>Chair in Theoretical Physics</span>
+        </div>
+        <!-- career5 info -->
+        <div class="careerItem" id="career5">
+          <span><i>1914–1933</i></span>
+          <span>Prussian Academy of Sciences </span>
+          <span>Membership</span>
+        </div>
+        <!-- career6 info -->
+        <div class="careerItem" id="career6">
+          <span><i>1914–1933</i></span>
+          <span>Humboldt University of Berlin</span>
+          <span>Chair</span>
+        </div>
+        <!-- career7 info -->
+        <div class="careerItem" id="career7">
+          <span><i>1916–1918</i></span>
+          <span>German Physical Society</span>
+          <span>President</span>
+        </div>
+        <!-- career8 info -->
+        <div class="careerItem" id="career8">
+          <span><i>1933–1955</i></span>
+          <span>Institute for Advanced Study</span>
+          <span>Resident Scholar</span>
+        </div>
+      </section>
+
+      <!-- Publications Section -->
       <section id="publications">
         <h1 id="publicationsHeader">Publications</h1>
+        <!-- publication item 1 -->
         <div class="publicationItem" id="paper1">
           <h4 class="paperTitle">
-            <a
-              href="http://www.physik.uni-augsburg.de/annalen/history/einstein-papers/1905_17_132-148.pdf"
-              target="_blank"
+            <a href="./publication pdfs/paper1.pdf" target="_blank"
               >On a Heuristic Viewpoint Concerning the Production and
-              Transformation of Light</a
-            >
+              Transformation of Light <i class="fa fa-external-link"></i
+            ></a>
           </h4>
           <span class="areaOfFocus"
             ><b>Area of Focus: </b>Photoelectric effect</span
@@ -116,14 +179,14 @@
           >
           <i class="fa paperIcon">&#xf15c;</i>
         </div>
+        <!-- publication item 2 -->
         <div class="publicationItem" id="paper2">
           <h4 class="paperTitle">
-            <a
-              href="http://sedici.unlp.edu.ar/handle/10915/2785"
-              target="_blank"
+            <a href="./publication pdfs/paper2.pdf" target="_blank"
               >On the Motion of Small Particles Suspended in a Stationary
-              Liquid, as Required by the Molecular Kinetic Theory of Heat</a
-            >
+              Liquid, as Required by the Molecular Kinetic Theory of Heat
+              <i class="fa fa-external-link"></i
+            ></a>
           </h4>
           <span class="areaOfFocus"><b>Area of Focus: </b>Brownian motion</span>
           <span class="paperPublishDate"><i>Date Published: 7/18/1905</i></span>
@@ -133,11 +196,13 @@
           >
           <i class="fa paperIcon">&#xf15c;</i>
         </div>
+        <!-- publication item 3 -->
         <div class="publicationItem" id="paper3">
           <h4 class="paperTitle">
-            <a href="https://doi.org/10.1002%2Fandp.19053221004" target="_blank"
-              >On the Electrodynamics of Moving Bodies</a
-            >
+            <a href="./publication pdfs/paper3.pdf" target="_blank"
+              >On the Electrodynamics of Moving Bodies
+              <i class="fa fa-external-link"></i
+            ></a>
           </h4>
           <span class="areaOfFocus"
             ><b>Area of Focus: </b>Special relativity</span
@@ -152,13 +217,13 @@
           >
           <i class="fa paperIcon">&#xf15c;</i>
         </div>
+        <!-- publication item 4 -->
         <div class="publicationItem" id="paper4">
           <h4 class="paperTitle">
-            <a
-              href="https://ui.adsabs.harvard.edu/abs/1905AnP...323..639E"
-              target="_blank"
-              >Does the Inertia of a Body Depend Upon Its Energy Content?</a
-            >
+            <a href="./publication pdfs/paper4.pdf" target="_blank"
+              >Does the Inertia of a Body Depend Upon Its Energy Content?
+              <i class="fa fa-external-link"></i
+            ></a>
           </h4>
           <span class="areaOfFocus"
             ><b>Area of Focus: </b>Matter–energy equivalence</span
@@ -173,13 +238,13 @@
           >
           <i class="fa paperIcon">&#xf15c;</i>
         </div>
+        <!-- publication item 5 -->
         <div class="publicationItem" id="paper5">
           <h4 class="paperTitle">
-            <a
-              href="https://www.nobelprize.org/prizes/physics/1921/einstein/lecture/"
-              target="_blank"
-              >Grundgedanken und Probleme der Relativitätstheorie</a
-            >
+            <a href="./publication pdfs/paper5.pdf" target="_blank"
+              >Grundgedanken und Probleme der Relativitätstheorie
+              <i class="fa fa-external-link"></i
+            ></a>
           </h4>
           <span class="areaOfFocus"
             ><b>Area of Focus: </b>Fundamental Ideas and Problems of the Theory
@@ -192,13 +257,13 @@
           >
           <i class="fa paperIcon">&#xf15c;</i>
         </div>
+        <!-- publication item 6 -->
         <div class="publicationItem" id="paper6">
           <h4 class="paperTitle">
-            <a
-              href="https://echo.mpiwg-berlin.mpg.de/ECHOdocuView?url=/permanent/echo/einstein/sitzungsberichte/PG8B073X/index.meta"
-              target="_blank"
-              >Quantentheorie des einatomigen idealen Gases</a
-            >
+            <a href="./publication pdfs/paper6.pdf" target="_blank"
+              >Quantentheorie des einatomigen idealen Gases
+              <i class="fa fa-external-link"></i
+            ></a>
           </h4>
           <span class="areaOfFocus"
             ><b>Area of Focus: </b>Quantum theory of monatomic ideal gases</span
@@ -210,53 +275,18 @@
           >
           <i class="fa paperIcon">&#xf15c;</i>
         </div>
-        <div class="publicationItem" id="paper7">
-          <h4 class="paperTitle">
-            <a
-              href="https://en.wikipedia.org/wiki/Special:BookSources/978-3-88682-005-4"
-              target="_blank"
-              >Albert Einstein, Hedwig und Max Born: Briefwechsel 1916–1955</a
-            >
-          </h4>
-          <span class="areaOfFocus"
-            ><b>Area of Focus: </b>Correspondence between Albert Einstein and
-            Hedwig and Max Born</span
-          >
-          <span class="paperPublishDate"><i>Date Published: 1969</i></span>
-          <span class="significance"
-            ><b>Significance: </b>Commented by Max Born; Preface by Bertrand
-            Russell; Foreword by Werner Heisenberg.</span
-          >
-          <i class="fa paperIcon">&#xf15c;</i>
-        </div>
-        <div class="publicationItem" id="paper8">
-          <h4 class="paperTitle">
-            <a
-              href="https://einsteinpapers.press.princeton.edu/"
-              target="_blank"
-              >The Collected Papers of Albert Einstein</a
-            >
-          </h4>
-          <span class="areaOfFocus"
-            ><b>Area of Focus: </b>Collection of Albert Einstein's papers</span
-          >
-          <span class="paperPublishDate"><i>Date Published: 7/21/2008</i></span>
-          <span class="significance"
-            ><b>Significance: </b>Edited by John Stachel, Martin J. Klein, A. J.
-            Kox, Michel Janssen, R. Schulmann, Diana Komos Buchwald, et al.
-            Volumes 1–10.</span
-          >
-          <i class="fa paperIcon">&#xf15c;</i>
-        </div>
       </section>
 
+      <!-- Awards Section -->
       <section id="awards">
         <h1 id="awardsHeader">Awards</h1>
+        <!-- award item 1 -->
         <div class="awardItem" id="award1">
           <img src="./images/awardImage1.png" alt="Nobel Prize in Physics" />
           <h4>Nobel Prize in Physics</h4>
           <span><i>1921</i></span>
         </div>
+        <!-- award item 2 -->
         <div class="awardItem" id="award2">
           <img
             src="./images/awardImage2.jpg"
@@ -265,21 +295,19 @@
           <h4>Prussian Academy of Sciences Membership</h4>
           <span><i>1913</i></span>
         </div>
+        <!-- award item 3 -->
         <div class="awardItem" id="award3">
           <img src="./images/awardImage3.jpg" alt="Doctorate of Medicine" />
           <h4>Doctorate of Medicine</h4>
           <span><i>1919</i></span>
         </div>
-        <div class="awardItem" id="award7">
-          <img src="./images/awardImage7.png" alt="Doctor of Science Degree" />
-          <h4>Doctor of Science Degree</h4>
-          <span><i>1921</i></span>
-        </div>
+        <!-- award item 4 -->
         <div class="awardItem" id="award4">
           <img src="./images/awardImage4.jpg" alt="Copley Medal" />
           <h4>Copley Medal</h4>
           <span><i>1925</i></span>
         </div>
+        <!-- award item 5 -->
         <div class="awardItem" id="award5">
           <img
             src="./images/awardImage5.jpg"
@@ -288,11 +316,19 @@
           <h4>Gold Medal of the Royal Astronomical Society</h4>
           <span><i>1926</i></span>
         </div>
+        <!-- award item 6 -->
         <div class="awardItem" id="award6">
           <img src="./images/awardImage6.png" alt="Prix Jules Janssen" />
           <h4>Prix Jules Janssen</h4>
           <span><i>1931</i></span>
         </div>
+        <!-- award item 7 -->
+        <div class="awardItem" id="award7">
+          <img src="./images/awardImage7.png" alt="Doctor of Science Degree" />
+          <h4>Doctor of Science Degree</h4>
+          <span><i>1921</i></span>
+        </div>
+        <!-- award item 8 -->
         <div class="awardItem" id="award8">
           <img
             src="./images/awardImage8.jpg"
@@ -303,35 +339,44 @@
         </div>
       </section>
 
+      <!-- Hobbies Section -->
       <section id="hobbies">
         <h1 id="hobbiesHeader">Hobbies</h1>
+        <!-- hobby item 1 -->
         <div class="hobbyItem" id="puzzle">
           <img src="./images/puzzle.jpg" alt="Albert Einstein playing puzzle" />
           <h4>Puzzle</h4>
         </div>
+        <!-- hobby item 2 -->
         <div class="hobbyItem" id="book">
           <img src="./images/book.jpg" alt="Albert Einstein reading book" />
           <h4>Reading</h4>
         </div>
+        <!-- hobby item 3 -->
         <div class="hobbyItem" id="violin">
           <img src="./images/violin.jpg" alt="Albert Einstein playing violin" />
           <h4>Violin</h4>
         </div>
+        <!-- hobby item 4 -->
         <div class="hobbyItem" id="essay">
           <img src="./images/essay.jpg" alt="Albert Einstein writing essay" />
           <h4>Writing</h4>
         </div>
       </section>
 
+      <!-- Gallery Section -->
       <section id="gallery">
         <h1 id="galleryHeader">Gallery</h1>
+        <!-- arrow button left -->
         <i
           class="material-icons"
           id="galleryArrowLeft"
           onclick="changeDisplayGalleryImage('left')"
           >arrow_left</i
         >
+        <!-- big gallery image display -->
         <img src="" alt="" id="galleryDisplay" />
+        <!-- arrow button right -->
         <i
           class="material-icons"
           id="galleryArrowRight"
@@ -339,72 +384,84 @@
           >arrow_right</i
         >
         <div id="imagesCollection">
+          <!-- gallery image 1 -->
           <img
             src="./images/imageCollection1.jpg"
             alt="image1"
             class="pictures"
             id="image1"
           />
+          <!-- gallery image 2 -->
           <img
             src="./images/imageCollection2.jpg"
             alt="image2"
             class="pictures"
             id="image2"
           />
+          <!-- gallery image 3 -->
           <img
             src="./images/imageCollection3.jpg"
             alt="image3"
             class="pictures"
             id="image3"
           />
+          <!-- gallery image 4 -->
           <img
             src="./images/imageCollection4.jpg"
             alt="image4"
             class="pictures"
             id="image4"
           />
+          <!-- gallery image 5 -->
           <img
             src="./images/imageCollection5.jpg"
             alt="image5"
             class="pictures"
             id="image5"
           />
+          <!-- gallery image 6 -->
           <img
             src="./images/imageCollection6.jpg"
             alt="image6"
             class="pictures"
             id="image6"
           />
+          <!-- gallery image 7 -->
           <img
             src="./images/imageCollection7.jpg"
             alt="image7"
             class="pictures"
             id="image7"
           />
+          <!-- gallery image 8 -->
           <img
             src="./images/imageCollection8.jpg"
             alt="image8"
             class="pictures"
             id="image8"
           />
+          <!-- gallery image 9 -->
           <img
             src="./images/imageCollection9.jpg"
             alt="image9"
             class="pictures"
             id="image9"
           />
+          <!-- gallery image 10 -->
           <img
             src="./images/imageCollection10.jpg"
             alt="image10"
             class="pictures"
             id="image10"
           />
+          <!-- gallery image 11 -->
           <img
             src="./images/imageCollection11.jpg"
             alt="image11"
             class="pictures"
             id="image11"
           />
+          <!-- gallery image 12 -->
           <img
             src="./images/imageCollection12.jpg"
             alt="image12"
@@ -414,9 +471,11 @@
         </div>
       </section>
 
+      <!-- Blogs Section -->
       <section id="blogs">
         <h1 id="blogsHeader">Blogs</h1>
         <div id="blogsList">
+          <!-- blog item 1 -->
           <div class="blogItem">
             <h4 class="blogTitle">On the Nature of Light</h4>
             <p class="blogDescription">
@@ -432,6 +491,7 @@
             <img class="blogImage" src="./images/light.jpg" alt="Blog Image" />
             <span class="blogDate"><i>Date Posted: 3/3/2024</i></span>
           </div>
+          <!-- blog item 2 -->
           <div class="blogItem">
             <h4 class="blogTitle">Musings on Time and Space</h4>
             <p class="blogDescription">
@@ -453,6 +513,7 @@
             />
             <span class="blogDate"><i>Date Posted: 3/3/2024</i></span>
           </div>
+          <!-- blog item 3 -->
           <div class="blogItem">
             <h4 class="blogTitle">Dreams of Quantum Reality</h4>
             <p class="blogDescription">
@@ -475,6 +536,7 @@
             <span class="blogDate"><i>Date Posted: 3/3/2024</i></span>
           </div>
         </div>
+        <!-- input section to create new blog -->
         <div id="blogInput">
           <input type="text" id="blogTitleInput" placeholder="Blog Title" />
           <textarea
