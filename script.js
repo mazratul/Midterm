@@ -185,12 +185,12 @@ function postBlogOnWebsite() {
   // create img element and set appropriate class name, src and alt
   let newBlogImage = document.createElement("img");
   newBlogImage.className = "blogImage";
-  // get the image path from local system
+
+  // get the image path from local system and set as source
   imageFileReader.onload = (event) => {
     newBlogImage.src = event.target.result;
   };
   imageFileReader.readAsDataURL(newBlog.imageSource);
-  // newBlogImage.src = newBlog.imageSource;
   // since the image is being taken from the local system and the folder .images/ mostly, the following code sets the default blog image if any image file source is invalid
   newBlogImage.onerror = () => {
     newBlogImage.src = "./images/defaultBlogImage.jpg";
