@@ -67,6 +67,7 @@ p {
   grid-area: hello;
   text-align: center;
   font-size: 4em;
+  color: snow;
 }
 #tongueOutImage {
   grid-area: tongueOutImage;
@@ -80,11 +81,13 @@ p {
   grid-area: albertEinstein;
   text-align: center;
   font-size: 3em;
+  color: snow;
 }
 #quote {
   grid-area: quote;
   font-size: 1.5em;
   text-align: center;
+  color: snow;
 }
 
 #aboutMe {
@@ -179,7 +182,7 @@ p {
   justify-content: space-evenly;
   align-items: center;
   border-radius: 0.5em;
-  background-color: snow;
+  background-color: #fdfdb4;
   font-size: 1em;
   padding: 0.5em 0;
   font-weight: 600;
@@ -232,7 +235,7 @@ p {
   column-gap: 1em;
   row-gap: 1em;
   justify-items: center;
-  background-color: #716104;
+  background-color: #ffc800;
   padding-top: 2em;
 }
 #publicationsHeader {
