@@ -29,8 +29,8 @@ p {
 .navItem {
   float: left;
   display: block;
-  margin: 0 1%;
-  width: 9%;
+  margin: 0 1.25%;
+  width: 10%;
   font-size: 1.15vw;
   text-align: center;
   text-decoration: none;
