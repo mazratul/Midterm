@@ -157,7 +157,7 @@ function postBlogOnWebsite() {
   let newBlog = {
     title: titleFromInput.value,
     description: descriptionFromInput.value,
-    imageSource: imageFromInput.value,
+    imageSource: "./images/" + imageFromInput.files[0].name,
     datePosted:
       dateFromSystem.getMonth() +
       1 +
@@ -185,6 +185,10 @@ function postBlogOnWebsite() {
   let newBlogImage = document.createElement("img");
   newBlogImage.className = "blogImage";
   newBlogImage.src = newBlog.imageSource;
+  // since the image is being taken from the local system and the folder .images/ only, the following code sets the default blog image if any image file is chosen outside the ./images folder
+  newBlogImage.onerror = () => {
+    newBlogImage.src = "./images/defaultBlogImage.jpg";
+  };
   newBlogImage.alt = "Blog Image";
 
   // create span element and set appropriate class name
