@@ -668,6 +668,7 @@ p {
   width: 100%;
   justify-items: center;
   align-items: stretch;
+  align-content: space-between;
   height: 20em;
   column-gap: 1em;
   row-gap: 0.5em;

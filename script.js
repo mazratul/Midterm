@@ -152,12 +152,13 @@ function postBlogOnWebsite() {
   let descriptionFromInput = document.querySelector("#blogDescriptionInput");
   let imageFromInput = document.querySelector("#blogImageInput");
   let dateFromSystem = new Date();
+  let imageFileReader = new FileReader();
 
   // create a new blog object and set the attribute values to user entered values
   let newBlog = {
     title: titleFromInput.value,
     description: descriptionFromInput.value,
-    imageSource: "./images/" + imageFromInput.files[0].name,
+    imageSource: imageFromInput.files[0],
     datePosted:
       dateFromSystem.getMonth() +
       1 +
@@ -184,8 +185,13 @@ function postBlogOnWebsite() {
   // create img element and set appropriate class name, src and alt
   let newBlogImage = document.createElement("img");
   newBlogImage.className = "blogImage";
-  newBlogImage.src = newBlog.imageSource;
-  // since the image is being taken from the local system and the folder .images/ only, the following code sets the default blog image if any image file is chosen outside the ./images folder
+  // get the image path from local system
+  imageFileReader.onload = (event) => {
+    newBlogImage.src = event.target.result;
+  };
+  imageFileReader.readAsDataURL(newBlog.imageSource);
+  // newBlogImage.src = newBlog.imageSource;
+  // since the image is being taken from the local system and the folder .images/ mostly, the following code sets the default blog image if any image file source is invalid
   newBlogImage.onerror = () => {
     newBlogImage.src = "./images/defaultBlogImage.jpg";
   };
