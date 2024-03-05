@@ -157,7 +157,7 @@ function postBlogOnWebsite() {
   let newBlog = {
     title: titleFromInput.value,
     description: descriptionFromInput.value,
-    imageSource: "./images/" + imageFromInput.files[0].name,
+    imageSource: imageFromInput.files[0].name,
     datePosted:
       dateFromSystem.getMonth() +
       1 +
